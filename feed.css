@@ -1,0 +1,517 @@
+:root{
+    --primary-color: #f2f5fa;
+    --secondary-color: rgb(13, 110, 253);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    font-size: 14.5px;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--secondary-color);
+    z-index: 5;
+}
+
+.leftnav{
+    display: flex;
+    gap: 5px;
+}
+
+.burgermenu{
+    display: none;
+}
+
+.logodiv .logo{
+    width: 50px;
+    height: 50px;
+}
+
+.rightnav{
+    display: flex;
+    gap: 10px;
+}
+
+.guestnumber{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.guestnumber span{
+    color: var(--secondary-color);
+}
+
+.profilepic{
+    display: flex;
+    align-items: center;
+}
+
+.profilepic img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.postbox{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    line-height: 1px;
+}
+
+.postbox h1{
+    font-size: 2rem;
+    font-family: 'Jost';
+    margin: 0;
+    padding: 0;
+}
+
+.postbox p{
+    font-size: 13px;
+    color: grey;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+/* DASHBOARD */
+#dashboard{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 61px;
+    width: 100%;
+}
+
+/* Left Bar */
+.leftbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 84%;
+    width: 16%;
+    top: 90px;
+    left: 2%;
+}
+
+.upperleft, .lowerleft{
+    background-color: var(--primary-color);
+    border-radius: 30px;
+}
+
+.leftbar form{
+    width: 100%;
+}
+
+.leftbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 15px;
+}
+
+.lowerleft ul{
+    margin: 10px;
+}
+
+.lowerleft img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.leftbar input{
+    border-radius: 5px;
+    border: none;
+    border-radius: 50px;
+    padding: 7px 15px;
+}
+
+.leftbar ul li, input{
+    list-style-type: none;
+    width: 100%;
+    align-items: center;
+}
+
+.leftbar ul li{
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+}
+
+.leftbar li svg{
+    width: 20px;
+    height: 20px;
+}
+
+
+.leftbar ul li:nth-child(n + 2):hover{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    color: var(--secondary-color);
+}
+
+.lowerleft ul li:hover{
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.lowerleft a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.lowerleft a:hover{
+    color: var(--secondary-color);
+}
+
+/* FEED */
+#feed{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    left: 21.2%;
+    top: 26px;
+    width: 45.5%;
+}
+
+.typesomething{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.typesomething svg{
+    width: 25px;
+    height: 25px;
+}
+.typeinput {
+    width: 100%;
+}
+
+.typeinput input{
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--primary-color);
+}
+
+.userpostinfo{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.userpostinfo .rightinfo p{
+    margin: 0;
+    font-size: 1.15px;
+}
+
+.leftinfo{
+    display: flex;
+    gap: 10px;
+}
+
+.posts{
+    /* width: 70%; */
+    background-color: var(--primary-color);
+    padding: 15px 0px 12px 0;
+    border-radius: 20px;
+}
+
+.posts:last-child{
+    margin-bottom: 30px;
+}
+
+.friends{
+    line-height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.friends a{
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.friends span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.time{
+    margin: 0;
+    font-size: 12px;
+    color: grey;
+}
+.userinfoandcaption{
+    padding: 0 20px;
+}
+
+#ch{
+    display: none;
+}
+
+#ch:checked ~ .readmore{
+    display: block;
+}
+
+#ch:checked ~ p label{
+    display: none;
+}
+
+.caption label{
+    display: inline-block;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.caption .readmore{
+    display: none;
+}
+
+.imagepost img{
+    width: 100%;
+}
+
+.interaction{
+    border-bottom: 1px solid lightgray;
+}
+
+.interaction .interactionsvg{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.interactionsvg .like:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.interactionsvg .comment:hover{
+    color: gold;
+    cursor: pointer;
+}
+
+.interactionsvg .share:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.interaction svg{
+    width: 18px;
+    height: 18px;
+}
+
+.interaction ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 12px 20px;
+    margin: 0;
+}
+
+.interaction ul li{
+    display: flex;
+    gap: 7px;
+}
+
+.interaction ul li svg{
+    width: 17px;
+    height: 17px;
+}
+
+.mycomment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin: 12px 20px 0 20px;
+}
+
+
+.userandhiscomment{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.typeyourcomment{
+    width: calc(100% - 65px);
+}
+
+.userandhiscomment input{
+    border: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+
+.addmore{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.addmore svg{
+    width: 17px;
+    height: 17px;
+}
+
+.addmore svg:hover{
+    cursor: pointer;
+}
+
+/* RIGHT BAR */
+.rightbar{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    /* max-width: 35%; */
+    top: 26px;
+    gap: 30px;
+}
+
+.rbcard{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: var(--primary-color);
+    width: 88%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.tbtitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Topics{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.seeall{
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+}
+
+.seeall:hover{
+    cursor: pointer;
+    color: lightgray;
+}
+
+.topicaccounts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lefttopicinfo{
+    display: flex;
+    gap: 10px;
+}
+
+.topicpic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.topicname{
+    display: flex;
+    align-items: center;
+}
+
+.topicname p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.follow{
+    display: flex;
+    align-items: center;
+}
+
+.follow:hover{
+    cursor: pointer;
+}
+
+.follow span{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1050px){
+    .rightbar{
+        display: none;
+    }
+
+    #feed{
+        width: 65%;
+        left: 30%;
+    }
+
+    .leftbar{
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .leftbar{
+        display: none;
+    }
+
+    #feed{
+        display: flex;
+        width: 89%;
+        left: 0;
+    }
+
+    #dashboard{
+        justify-content: center;
+    }
+
+    .burgermenu{
+        display: flex;
+        align-items: center;
+    }
+
+    .burgermenu span{
+        font-size: 25px;
+        color: black;
+    }
+
+    .burgermenu span:hover{
+        color: var(--secondary-color);
+        cursor: pointer;
+    }
+}

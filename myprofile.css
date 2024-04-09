@@ -1,0 +1,187 @@
+:root{
+    --primary-color: #f2f5fa;
+    --secondary-color: rgb(13, 110, 253);
+}
+
+*{
+    font-size: 1rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.gobackbtn{
+    display: flex;
+    align-items: center;
+}
+
+.gobackbtn a{
+    text-decoration: none;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    padding: 4px 15px;
+}
+
+.gobackbtn a:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+#myprofilefeed{
+    position: relative;
+    top: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.titleposts{
+    margin: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+    width: 30%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.myprofileinfo{
+    display: flex;
+    gap: 100px;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.myprofilepic img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.myprofilebio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.myprofilebio .username h2{
+    font-weight: bold;
+}
+
+.profilebio{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.profilestats{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.aboutme p{
+    margin: 0;
+}
+
+.followme button{
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 8px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.uploadedpost img{
+    width: 100%;
+    height: 240px;
+}
+
+.profilegridposts{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 95%;
+    gap: 10px;
+}
+
+.profilegridposts img{
+    border-radius: 10px;
+}
+
+.poststogether{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 750px){
+    .myprofileinfo{
+        width: 95%;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .myprofilepic img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .profilegridposts{
+        grid-template-columns: auto;
+        width: 95%;
+    }
+    
+    .uploadedpost {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .uploadedpost img{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .guestnumber{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    *{
+        font-size: 13px;
+    }
+
+    #myprofilefeed{
+        gap: 10px;
+    }
+
+    .myprofileinfo{
+        width: 100%;
+        padding: 15px 10px;
+        gap: 10px;
+        border-radius: 0px;
+        max-width: 100%;
+    }
+
+    .myprofilepic img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .username h2{
+        font-size: 1.4rem;
+    }
+
+    .profilegridposts{
+        grid-template-columns: auto;
+        max-width: 100%;
+    }
+}

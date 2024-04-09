@@ -1,0 +1,72 @@
+:root{
+    --primary-color: #f2f5fa;
+    --secondary-color: rgb(13, 110, 253);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#upload{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+    width: 100%;
+    max-width: 50%;
+    top: 100px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+#upload h5{
+    font-weight: bold;
+}
+
+#upload input{
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
+#upload h6{
+    font-weight: bold;
+}
+
+#upload textarea{
+    border: none;
+    border-radius: 25px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+
+#upload a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.postdescription{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.createpostbtn{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 950px){
+    #upload{
+        width: 100%;
+        max-width: 90%;
+    }
+}
